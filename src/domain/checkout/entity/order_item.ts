@@ -37,6 +37,11 @@ export default class OrderItem {
     return this._quantity;
   }
 
+  set quantity(quantity: number) {
+    this._quantity = quantity;
+    this._total = this.total();
+  }
+
   get price(): number {
     return this._price;
   }
